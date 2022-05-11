@@ -13,22 +13,22 @@ package com.hyperconix.game2D;
  * <br><br>
  * It also contains the logic for bounding box and bounding circle collisions
  * 
- * @author 2727141
+ * @author Luke S
  *
  */
 public class CollisionManager {
 	
-	/**
-	 * Responsible for storing the character that indicates the "air" or an empty space
-	 * in the TileMap
-	 */
-	private char airTileCharacter;
+    /**
+      * Responsible for storing the character that indicates the "air" or an empty space
+      * in the TileMap
+      */
+    private char airTileCharacter;
 	
-	/**
-	 * 
-	 * @param airTileCharacter The air or empty space tile character being used 
-	 */
-	public CollisionManager(char airTileCharacter) {
+    /**
+     * 
+     * @param airTileCharacter The air or empty space tile character being used 
+     */
+    public CollisionManager(char airTileCharacter) {
 		this.airTileCharacter = airTileCharacter;
 	}
 	
@@ -42,8 +42,7 @@ public class CollisionManager {
      * 
      * @return {@code true} if there was a collision, {@code false} otherwise
      */
-    public boolean boundingBoxCollision(Sprite firstSprite, Sprite secondSprite)
-    {
+    public boolean boundingBoxCollision(Sprite firstSprite, Sprite secondSprite)  {
         return ((firstSprite.getX() + firstSprite.getImage().getWidth(null) > secondSprite.getX()) &&
                 (firstSprite.getX() < (secondSprite.getX() + secondSprite.getImage().getWidth(null))) &&
                 ((firstSprite.getY() + firstSprite.getImage().getHeight(null) > secondSprite.getY()) &&
@@ -62,8 +61,7 @@ public class CollisionManager {
      * 
      * @return {@code true} if there was a collision, {@code false} otherwise
      */
-    public boolean boundingCircleCollision(Sprite firstSprite, Sprite secondSprite)
-    {
+    public boolean boundingCircleCollision(Sprite firstSprite, Sprite secondSprite) {
         int s1CentreWidth = (int) (firstSprite.getX() + (firstSprite.getWidth() / 2));
         
         int s1CentreHeight = (int) (firstSprite.getY() + (firstSprite.getHeight() / 2));
@@ -91,8 +89,7 @@ public class CollisionManager {
      * 
      * @return {@code true} If there a collision between a right tile and the sprite, otherwise {@code false}
      */
-    public boolean collisionAtRight(Tile collidingTile, Sprite collidingSprite, TileMap currentTileMap) 
-    {
+    public boolean collisionAtRight(Tile collidingTile, Sprite collidingSprite, TileMap currentTileMap)  {
     	return collidingTile.getCharacter() != airTileCharacter && 
     		   (collidingSprite.getX() + collidingSprite.getWidth() >
     		   collidingTile.getXC());
@@ -108,8 +105,7 @@ public class CollisionManager {
      * 
      * @return {@code true} If there a collision between a right tile and the sprite, otherwise {@code false}
      */
-    public boolean collisionAtLeft(Tile collidingTile, Sprite collidingSprite, TileMap currentTileMap) 
-    {
+    public boolean collisionAtLeft(Tile collidingTile, Sprite collidingSprite, TileMap currentTileMap)  {
     	return collidingTile.getCharacter() != airTileCharacter && 
     		   collidingSprite.getX() < (collidingTile.getXC() + currentTileMap.getTileWidth());
     		   
@@ -125,8 +121,7 @@ public class CollisionManager {
      * 
      * @return {@code true} If there a collision between a right tile and the sprite, otherwise {@code false}
      */
-    public boolean collisionAtTop(Tile collidingTile, Sprite collidingSprite, TileMap currentTileMap) 
-    {
+    public boolean collisionAtTop(Tile collidingTile, Sprite collidingSprite, TileMap currentTileMap) {
     	return collidingTile.getCharacter() != airTileCharacter && 
     		   collidingSprite.getY() < (collidingTile.getYC() + currentTileMap.getTileHeight());
     }
@@ -142,8 +137,7 @@ public class CollisionManager {
      * 
      * @return {@code true} If there a collision between a right tile and the sprite, otherwise {@code false}
      */
-    public boolean collisionAtBottom(Tile collidingTile, Sprite collidingSprite, TileMap currentTileMap) 
-    {
+    public boolean collisionAtBottom(Tile collidingTile, Sprite collidingSprite, TileMap currentTileMap) {
     	return collidingTile.getCharacter() != airTileCharacter && 
     		  (collidingSprite.getY() + collidingSprite.getHeight() >
     	      collidingTile.getYC()); 
