@@ -1,0 +1,34 @@
+64 15 32 32
+// The first line should contain the width and height of the
+// map and the width and height of each tile. A list of character to
+// tile mappings is then provided where each character is preceded by a
+// # character. The dot character always defaults to a blank space 
+// Note that the referenced files should be in the same directory as the
+// tile map.
+#d=tiles/2.png
+#g=tiles/5.png
+#p=tiles/7.png
+#m=tiles/4.png
+#e=tiles/1.png
+#f=tiles/3.png
+#p=tiles/platform1.png
+#s=tiles/spike.png
+#c=../images/Collectables/anim_coin.gif
+#v=../images/Collectables/anim_diamond.gif
+// The actual tile map is preceded by the #map line
+#map
+edddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd.
+mgggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg.
+mgggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg.
+mg..............................................................
+mg...dddddddd.................dddddddd..............dddddddd....
+mg..............................................................
+mg........cccccccccc...ccccccccccc.c....cccccc.v..ccccccccc.....
+mgdddddddddddddddddd..dddddddddddddd...ddddddddddddddddddddd....
+mggggggggggggggggggg................p...........................
+mggggggggggggggggggg.................p...ccccccccccc.v.cccccccc.
+mggggggggggggggggggg...................p.dddddddddddddddddddddd.
+mggggggggggggggggggg.....................gggggggggggggggggggggg.
+mgggggggggggggggggggsssssssssssssssssssssgggggggggggggggggggggg.
+mgggggggggggggggggggdddddddddddddddddddddgggggggggggggggggggggg.
+mgggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg.

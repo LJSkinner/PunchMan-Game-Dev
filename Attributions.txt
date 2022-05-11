@@ -1,0 +1,17 @@
+Attributions:
+Player and enemy Sprites: Credit goes to GrafxKid https://opengameart.org/content/classic-hero-and-baddies-pack
+Platformer 32x2, all credit goes to Madarck: https://opengameart.org/content/platformer-32x32-preview
+Ultimate Timeracer Button Pack credit goes to rrcaseyr: https://opengameart.org/content/ultimate-timeracer-button-pack
+Heart Image - credit goes to DanSevenStar.xyz: https://opengameart.org/content/heart-pixel-art
+Star (Life Indicator) credit goes to peony: https://opengameart.org/content/magic-pixel-art
+Hit Sounds by Independent.nu: https://opengameart.org/content/37-hitspunches
+Spinning Pixel Coin credit goes to irmirx: https://opengameart.org/content/spinning-pixel-coin-0
+Diamond, Three Shiny Jewels credit goes to software_atelier: https://opengameart.org/content/three-shiny-jewels-square-soft-diamond-hard-edge-diamond-shapes-package
+Ding Sounds credit goes to dklon: https://opengameart.org/content/dings
+8 Bit Sound Effects Pack (Vol. 001) used Coin 1, Jump 1, Hit 4, Select 4 and Hit 5 credit goes to Deva: https://opengameart.org/content/8-bit-sound-effect-pack-vol-001
+Play and Other Buttons credit goes to rrcaseyr: https://opengameart.org/content/ultimate-timeracer-button-pack
+Switches - credit goes to https://opengameart.org/content/switches
+Time Travel Clip by Mike Koenig. This is altered by the novel sound filter implemented for this project, no other changes were made: https://soundbible.com/109-Time-Travel-Clip.html
+Parallax Rocky Pass Background by ansimuz: https://opengameart.org/content/gothicvania-rocky-pass-environment
+Portal Animation by rrcaseyr, was turned into a gif: https://opengameart.org/content/portal-animation
+Death Sound by Dan Knoflicek: Used Death 4 - https://opengameart.org/content/death-sounds
