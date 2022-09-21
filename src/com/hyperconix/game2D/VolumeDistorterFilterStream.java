@@ -43,12 +43,13 @@ public class VolumeDistorterFilterStream extends FilterInputStream {
 		
 		buffer[position + 1] = (byte) ((sample >> 8) & 0xFF);
 	}
-
+	
+	@Override
 	public int read(byte [] sample, int offset, int length) throws IOException
 	{
 		int bytesRead = super.read(sample, offset, length);
 	
-		float change = 2.0f * (0.5f / (float) bytesRead);
+		float change = 2.0f * (0.5f / bytesRead);
 	
 		float volume = 1.0f;
 			
@@ -64,8 +65,8 @@ public class VolumeDistorterFilterStream extends FilterInputStream {
 			amp = getSample(sample,p);
 				
 			//if it is even, keep the volume the same, otherwise multiply it by the change
-			amp = ranNum % 2 == 0 ? (short)((float)amp * volume)
-						          : (short)((float)amp * (volume * change));
+			amp = ranNum % 2 == 0 ? (short)(amp * volume)
+						          : (short)(amp * (volume * change));
 			
 			setSample(sample,p,amp);	
 		}

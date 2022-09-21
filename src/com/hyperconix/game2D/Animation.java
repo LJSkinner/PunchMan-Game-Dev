@@ -144,7 +144,7 @@ public class Animation
      */
     private AnimFrame getFrame(int i)
     {
-        return (AnimFrame) frames.get(i);
+        return frames.get(i);
     }
 
     /**
