@@ -80,6 +80,11 @@ public class PunchMan extends GameCore implements MouseListener {
 	 * Responsible for storing the play button y coord for the menu/pause screen.
 	 */
 	private static final int MENU_PLAY_BTN_Y = 200;
+	
+	/**
+	 * Responsible for storing the default UI font that is used.
+	 */
+	private static final String DEFAULT_UI_FONT = "Consolas"; 
 
 	/**
 	 * Responsible for storing the current coin count for the level.
@@ -220,7 +225,7 @@ public class PunchMan extends GameCore implements MouseListener {
 	 * Responsible for storing the Collision Manager for the game.
 	 */
 	private CollisionManager collisionManager;
-
+	
 	/**
 	 * Responsible for storing the UI Images for the UI elements of the game.
 	 */
@@ -411,7 +416,7 @@ public class PunchMan extends GameCore implements MouseListener {
 		// Draw background first
 		g.drawImage(UIBackground, (SCREEN_WIDTH / 2) - (UIBackground.getWidth(null) / 2), 0, null);
 
-		g.setFont(new Font("Consolas", Font.BOLD, 60));
+		g.setFont(new Font(DEFAULT_UI_FONT, Font.BOLD, 60));
 
 		g.setColor(Color.black);
 
@@ -432,13 +437,13 @@ public class PunchMan extends GameCore implements MouseListener {
 	public void drawGameOver(Graphics2D g) {
 		g.drawImage(UIBackground, (SCREEN_WIDTH / 2) - (UIBackground.getWidth(null) / 2), 0, null);
 
-		g.setFont(new Font("Consolas", Font.BOLD, 60));
+		g.setFont(new Font(DEFAULT_UI_FONT, Font.BOLD, 60));
 
 		g.setColor(Color.black);
 
 		g.drawString("You Lose", 230, 75);
 
-		g.setFont(new Font("Consolas", Font.BOLD, 30));
+		g.setFont(new Font(DEFAULT_UI_FONT, Font.BOLD, 30));
 
 		g.setColor(Color.black);
 
@@ -541,19 +546,19 @@ public class PunchMan extends GameCore implements MouseListener {
 	public void drawWinning(Graphics2D g) {
 		g.drawImage(UIBackground, (SCREEN_WIDTH / 2) - (UIBackground.getWidth(null) / 2), 0, null);
 
-		g.setFont(new Font("Consolas", Font.BOLD, 60));
+		g.setFont(new Font(DEFAULT_UI_FONT, Font.BOLD, 60));
 
 		g.setColor(Color.black);
 
 		g.drawString("Well Done!", 200, 75);
 
-		g.setFont(new Font("Consolas", Font.BOLD, 30));
+		g.setFont(new Font(DEFAULT_UI_FONT, Font.BOLD, 30));
 
 		g.setColor(Color.black);
 
 		g.drawString("Press Enter to Restart", 163, 240);
 
-		g.setFont(new Font("Consolas", Font.BOLD, 30));
+		g.setFont(new Font(DEFAULT_UI_FONT, Font.BOLD, 30));
 
 		g.setColor(Color.black);
 
