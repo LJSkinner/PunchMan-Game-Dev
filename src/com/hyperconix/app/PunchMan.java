@@ -347,6 +347,7 @@ public class PunchMan extends GameCore implements MouseListener {
 			break;
 		case GAME_WIN:
 			drawWinning(g);
+			break;
 		default:
 			break;
 		}
@@ -587,9 +588,10 @@ public class PunchMan extends GameCore implements MouseListener {
 	 */
 	public void update(long elapsed) {
 
-		if (currentStatus != GameStatus.GAME_STARTED)
+		if (currentStatus != GameStatus.GAME_STARTED) {
 			return;
-
+		}
+			
 		player.setAnimationSpeed(1.0f);
 
 		portal.setAnimationSpeed(1.0f);
@@ -685,8 +687,9 @@ public class PunchMan extends GameCore implements MouseListener {
 	 */
 	public void checkIdleState() {
 
-		if (player.isAttacking())
+		if (player.isAttacking()) {
 			return;
+		}
 
 		Animation currentAnimation = player.getAnimation();
 
@@ -705,15 +708,17 @@ public class PunchMan extends GameCore implements MouseListener {
 	 */
 	public void checkAttackState() {
 
-		if (!player.isAttacking())
+		if (!player.isAttacking()) {
 			return;
-
+		}
+			
 		player.setAnimation(playerAttack);
 
 		Animation attackAnimation = player.getAnimation();
 
 		if (attackAnimation.hasLooped()) {
 			attackAnimation.start();
+			
 			player.setAttacking(false);
 		}
 
@@ -770,6 +775,7 @@ public class PunchMan extends GameCore implements MouseListener {
 		
 		if(muteBackgroundMusic) {
 			backgroundPlayer.stopScore();
+			
 			return;
 		}
 
@@ -911,8 +917,9 @@ public class PunchMan extends GameCore implements MouseListener {
 	public void keyPressed(KeyEvent e) {
 		int key = e.getKeyCode();
 
-		if (currentStatus == GameStatus.GAME_PAUSED)
+		if (currentStatus == GameStatus.GAME_PAUSED) {
 			return;
+		}
 
 		switch (key) {
 		case KeyEvent.VK_ESCAPE:
@@ -1026,9 +1033,10 @@ public class PunchMan extends GameCore implements MouseListener {
 
 		boolean jumpPossible = player.isOnGround() && !player.isJumping();
 
-		if (!jumpPossible)
+		if (!jumpPossible) {
 			return;
-
+		}
+			
 		player.setJumping(true);
 
 		player.setVelocityY(lift);
@@ -1054,9 +1062,10 @@ public class PunchMan extends GameCore implements MouseListener {
 		boolean attackValid = !player.isAttacking() && (!player.isMovingLeft() && !player.isMovingRight())
 				&& !player.getAnimation().equals(playerAttack) && player.isOnGround();
 
-		if (!attackValid)
+		if (!attackValid) {
 			return;
-
+		}
+			
 		player.setAttacking(true);
 
 		Sound s = new Sound("sounds/hit28.wav");
@@ -1082,8 +1091,10 @@ public class PunchMan extends GameCore implements MouseListener {
 	 * the pause and then player can click the play button again to resume.
 	 */
 	public void pauseGame() {
-		if (currentStatus != GameStatus.GAME_MENU)
+		if (currentStatus != GameStatus.GAME_MENU) {
 			currentStatus = GameStatus.GAME_MENU;
+		}
+	
 	}
 
 	/**
@@ -1313,7 +1324,8 @@ public class PunchMan extends GameCore implements MouseListener {
 		UIPlay = loadImage("images/UI/play_button.png");
 		UIExit = loadImage("images/UI/exit_button.png");
 	}
-
+	
+	@Override
 	public void keyReleased(KeyEvent e) {
 		int key = e.getKeyCode();
 
@@ -1330,6 +1342,7 @@ public class PunchMan extends GameCore implements MouseListener {
 			break;
 		case KeyEvent.VK_SPACE:
 			player.setJumping(false);
+			break;
 		default:
 			break;
 		}
@@ -1582,7 +1595,6 @@ public class PunchMan extends GameCore implements MouseListener {
 
 		int mouseY = e.getY();
 		
-
 		// Get the bounds of the buttons, I.E where the user has to click
 
 		boolean inExitBtnBounds = mouseX >= MENU_EXIT_BTN_X && mouseX <= MENU_EXIT_BTN_X + UIExit.getWidth(null)
@@ -1601,21 +1613,22 @@ public class PunchMan extends GameCore implements MouseListener {
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-
-	}
+        // Mouse pressed included as part of MouseListener interface, not yet used.
+    }
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
+		// Mouse released included as part of MouseListener interface, not yet used.
 
 	}
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
-
+		// Mouse entered included as part of MouseListener interface, not yet used.
 	}
 
 	@Override
 	public void mouseExited(MouseEvent e) {
-
+		// Mouse exited included as part of MouseListener interface, not yet used.
 	}
 }
