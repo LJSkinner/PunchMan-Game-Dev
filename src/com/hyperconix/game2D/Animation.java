@@ -124,7 +124,7 @@ public class Animation
      */
     public synchronized Image getImage()
     {
-        if (frames.size() == 0)
+        if (frames.isEmpty())
         {
             return null;
         }
